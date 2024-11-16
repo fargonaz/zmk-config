@@ -1,0 +1,27 @@
+#if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT || SHIELD_CORNE_LEFT_PERIPHERAL || SHIELD_CORNE_DONGLE_PRO_MICRO
+
+
+if SHIELD_DONGLE
+
+#  config ZMK_KEYBOARD_NAME
+#   default "DONGLE"
+   config ZMK_KEYBOARD_NAME
+    default "MONO36"
+
+  config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+  config ZMK_USB
+    default y
+
+endif # ZMK_DISPLAY
+
+if SHIELD_MONO36 || SHIELD_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_BLE
+    default y
+
+endif
